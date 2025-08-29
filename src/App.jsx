@@ -1,10 +1,4 @@
 import React from "react";
-
-// QuickFox Digital – Single-file landing page
-// - Drop into a Vite + React project as src/App.jsx (or use in any SPA build)
-// - Tailwind CSS recommended (but styles degrade gracefully without it)
-// - Update the copy/sections as needed; logo is an inline SVG for portability
-
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -38,7 +32,6 @@ function Header() {
     </header>
   );
 }
-
 function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -73,7 +66,6 @@ function Hero() {
     </section>
   );
 }
-
 function Clients() {
   return (
     <section className="py-10">
@@ -130,7 +122,6 @@ function Services() {
     </section>
   );
 }
-
 function Process() {
   const steps = [
     ['Kickoff','Scope lock, risks, acceptance criteria'],
@@ -159,7 +150,6 @@ function Process() {
     </section>
   );
 }
-
 function Work() {
   const cards = [
     ['FieldOps','Digitized inspections; offline sync; 5k MAU in 4 months'],
@@ -186,7 +176,6 @@ function Work() {
     </section>
   );
 }
-
 function CTA() {
   return (
     <section id="contact" className="py-20">
@@ -202,7 +191,6 @@ function CTA() {
     </section>
   );
 }
-
 function Footer() {
   return (
     <footer className="border-t border-slate-200">
@@ -216,24 +204,10 @@ function Footer() {
     </footer>
   );
 }
-
+import logo from "./assets/QuickFox-Games_Logo_2026.png";
 function Logo({ className = "h-8 w-8" }) {
-  // Minimal, custom fox-tail mark (monochrome‑friendly)
-  return (
-    <svg viewBox="0 0 64 64" className={className} aria-hidden>
-      <defs>
-        <linearGradient id="qfgrad" x1="0" x2="1">
-          <stop offset="0%" stopColor="#EA580C" />
-          <stop offset="100%" stopColor="#0EA5A5" />
-        </linearGradient>
-      </defs>
-      <circle cx="32" cy="32" r="30" fill="#0f172a" opacity="0.06" />
-      <path d="M38 10c-3 3-4 7-2 10-6-1-12 3-14 9 5-2 9-2 13 0-9 6-15 15-14 23 10-8 20-7 26-16 4-6 4-13 1-20-3 1-7 2-10-6z" fill="url(#qfgrad)" />
-      <path d="M42 22c-3 2-4 5-3 8 2-1 5-3 6-5 0-1-1-3-3-3z" fill="#111827" opacity="0.15" />
-    </svg>
-  );
+    return <img src={logo} alt="QuickFox logo" className={className} />;
 }
-
 function MockPhone() {
   return (
     <div className="mx-auto w-full max-w-sm">
