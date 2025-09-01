@@ -15,7 +15,6 @@ export default function App() {
         </div>
     );
 }
-
 function Header() {
     return (
         <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100">
@@ -26,11 +25,31 @@ function Header() {
                         QuickFox <span className="text-orange-600">Interactive</span>
                     </span>
                 </div>
-                <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-                    <a href="#services" className="font-bold hover:text-orange-600">Services</a>
-                    <a href="#rates" className="font-bold hover:text-orange-600">Rates</a>
-                    <a href="#contracts" className="font-bold hover:text-orange-600">Contracts</a>
-                    <a href="#contact" className="px-4 py-2 rounded-2xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition">Book a Call</a>
+                <nav className="hidden md:flex items-center gap-6 text-sm">
+                    <a
+                        href="#services"
+                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                    >
+                        Services
+                    </a>
+                    <a
+                        href="#rates"
+                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                    >
+                        Rates
+                    </a>
+                    <a
+                        href="#contracts"
+                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                    >
+                        Contracts
+                    </a>
+                    <a
+                        href="#contact"
+                        className="px-4 py-2 rounded-2xl bg-orange-600 text-white font-bold no-underline hover:bg-orange-700 transition"
+                    >
+                        Book a Call
+                    </a>
                 </nav>
             </div>
         </header>
