@@ -22,13 +22,15 @@ function Header() {
             <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <Logo className="h-9 w-9" />
-                    <span className="font-black tracking-tight text-xl">QuickFox <span className="text-orange-600">Interactive</span></span>
+                    <span className="font-black tracking-tight text-xl">
+                        QuickFox <span className="text-orange-600">Interactive</span>
+                    </span>
                 </div>
                 <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-                    <a href="#services" className="hover:text-orange-600">Services</a>
-                    <a href="#rates" className="hover:text-orange-600">Rates</a>
-                    <a href="#contracts" className="hover:text-orange-600">Contracts</a>
-                    <a href="#contact" className="px-4 py-2 rounded-2xl bg-orange-600 text-white hover:bg-orange-700 transition">Book a Call</a>
+                    <a href="#services" className="font-bold hover:text-orange-600">Services</a>
+                    <a href="#rates" className="font-bold hover:text-orange-600">Rates</a>
+                    <a href="#contracts" className="font-bold hover:text-orange-600">Contracts</a>
+                    <a href="#contact" className="px-4 py-2 rounded-2xl bg-orange-600 text-white font-bold hover:bg-orange-700 transition">Book a Call</a>
                 </nav>
             </div>
         </header>
