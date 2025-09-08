@@ -18,7 +18,7 @@ export default function App() {
 function Header() {
     return (
         <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100">
-            <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <div className="w-full px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <Logo className="h-9 w-9" />
                     <span className="font-black tracking-tight text-xl">
@@ -28,19 +28,19 @@ function Header() {
                 <nav className="hidden md:flex items-center gap-6 text-sm">
                     <a
                         href="#services"
-                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                        className="font-bold no-underline text-slate-900 visited:text-slate-900 hover:text-orange-600"
                     >
                         Services
                     </a>
                     <a
                         href="#rates"
-                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                        className="font-bold no-underline text-slate-900 visited:text-slate-900 hover:text-orange-600"
                     >
                         Rates
                     </a>
                     <a
                         href="#contracts"
-                        className="no-underline font-bold text-slate-900 hover:text-orange-600"
+                        className="font-bold no-underline text-slate-900 visited:text-slate-900 hover:text-orange-600"
                     >
                         Contracts
                     </a>
@@ -60,7 +60,7 @@ function Hero() {
     return (
         <section className="relative overflow-hidden">
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-orange-50 via-white to-white" />
-            <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+            <div className="mx-auto w-full px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
                 <div>
                     <p className="inline-block rounded-full bg-slate-900 text-white text-xs font-semibold px-3 py-1 mb-4">Cross‑platform mobile apps made with Unity</p>
                     <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-tight">
@@ -115,7 +115,7 @@ function Services() {
     ];
     return (
         <section id="services" className="py-16 bg-slate-50">
-            <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto w-full px-6">
                 <h2 className="text-3xl font-black tracking-tight">Service Offerings</h2>
                 <div className="mt-6 overflow-x-auto">
                     <table className="min-w-full text-sm">
@@ -152,7 +152,7 @@ function Rates() {
     ];
     return (
         <section id="rates" className="py-16">
-            <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto w-full px-6">
                 <h2 className="text-3xl font-black tracking-tight">Rate Cards</h2>
                 <div className="mt-6 grid md:grid-cols-3 gap-4">
                     {rows.map(([dept, price], i) => (
