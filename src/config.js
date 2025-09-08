@@ -1,10 +1,10 @@
 export const BRAND = {
     name: "QuickFox Interactive",
-    email: "hello@quickfox.digital",
-    phone: "+1 (555) 555-0123",
+    email: "quickfox.interactive@gmail.com",
+    phone: "+1 (647) 330 1778",
     socials: {
-        website: "https://quickfox.digital",
-        linkedin: "https://www.linkedin.com/company/quickfox-digital",
+        website: "https://quickfox-interactive.vercel.app/",
+        linkedin: "https://www.linkedin.com/company/quickfox-interactive",
     },
 };
 export const COLORS = {

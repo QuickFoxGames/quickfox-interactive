@@ -202,7 +202,7 @@ function CTA() {
 
                 {/* Example of a contextual link sitting on a light background */}
                 <p className="mt-6 text-sm text-slate-600">
-                    Prefer chat?{" "}
+                    Prefer to chat?{" "}
                     <a href={BRAND.socials.linkedin} className="link-on-light">
                         Connect on LinkedIn
                     </a>
