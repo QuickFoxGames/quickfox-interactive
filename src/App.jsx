@@ -1,16 +1,16 @@
 import React from "react";
 import Logo from "./components/Logo";
 import { BRAND } from "./config";
+import { Icon } from '@iconify/react';
 export default function App() {
     return (
-        <div className="min-h-screen w-full bg-white text-slate-900 flex flex-col">
+        <div className="min-h-screen w-full bg-white flex flex-col">
             <Header />
             <main className="flex-1">
                 <Hero />
                 <Services />
                 <Rates />
-                <Contracts />
-                <Maintenance />
+                <ITServices />
                 <CTA />
             </main>
             <Footer />
@@ -19,20 +19,19 @@ export default function App() {
 }
 function Header() {
     return (
-        <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100">
-            <div className="w-full px-6 md:px-10 lg:px-14 py-4 flex items-center justify-between">
+        <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-dcol">
+            <div className="w-full px-6 md:px-8 lg:px-14 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <Logo className="h-9 w-9" />
-                    <span className="font-black tracking-tight text-xl">
-                        QuickFox <span className="text-orange-600">Interactive</span>
-                    </span>
+                    <div className="flex gap-1">
+                        <span className="text-hs text-bold text-pcol">QuickFox</span>
+                        <span className="text-hs text-bold text-scol">Interactive</span>
+                    </div>
                 </div>
-
-                {/* On light surface, use link-on-light */}
                 <nav className="hidden md:flex items-center gap-6 text-sm">
-                    <a href="#services" className="link-on-light">Services</a>
-                    <a href="#rates" className="link-on-light">Rates</a>
-                    <a href="#contracts" className="link-on-light">Contracts</a>
+                    <a href="#services" className="text-bs text-medium text-dcol-hov">Services</a>
+                    <a href="#rates" className="text-bs text-medium text-dcol-hov">Rates</a>
+                    <a href="#contracts" className="text-bs text-medium text-dcol-hov">Contracts</a>
                     <a href="#contact" className="btn-primary">Book a Call</a>
                 </nav>
             </div>
@@ -40,6 +39,19 @@ function Header() {
     );
 }
 function Hero() {
+    return (
+        <section className="relative overflow-hidden bg-offwhite">
+            <div className="mb-8 mt-8 w-full px-6 md:px-8 text-justified">
+                <div>
+                    <h1 className="text-hm text-xbold text-dcol">
+                        We ship polished mobile apps and games in as little as 12 weeks
+                    </h1>
+                </div>
+            </div>
+        </section>
+    );
+}
+/*function Hero() {
     return (
         <section className="relative overflow-hidden">
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-orange-50 via-white to-white" />
@@ -67,37 +79,42 @@ function Hero() {
             </div>
         </section>
     );
-}
+}*/
 function Services() {
     const rows = [
-        { name: 'Discovery (1–2 weeks)', scope: 'Product brief, tech plan, estimate, concepts', price: '$4k–$12k (one-time fee)', hours: 'N/A' },
-        { name: 'MVP (8–12 weeks)', scope: 'Core features; product for internal use/testing', price: '$25k–$65k (one-time fee)', hours: '360 hours (est.)' },
-        { name: 'Standard (12–20 weeks)', scope: 'Complete initial build; viable public access product', price: '$60k–$150k (one-time fee)', hours: '960 hours (est.)' },
-        { name: 'Enterprise (20–36+ weeks)', scope: 'Complete initial build; third-party integrations; real-time intercommunication; encryption', price: '$150k–$400k (one-time fee)', hours: '2400 hours (est.)' },
-        { name: 'Maintenance (20–60 hrs/month)', scope: 'Crash fixes; OS updates; general bug fixes', price: '$2k–$10k per month', hours: 'N/A' },
+        { name: 'Discovery (1-2 weeks)', scope: 'layout project scope, recommended package, timeline and pricing', price: '$0', hours: 'N/A' },
+        { name: 'MVP (8–12 weeks)', scope: 'Minimum viable product for internal use/testing', price: '$17,000–$65,000', hours: '360 hours (est.)' },
+        { name: 'Standard (12–20 weeks)', scope: 'Complete project viable for public release', price: '$44,000–$173,000', hours: '960 hours (est.)' },
+        { name: 'Enterprise (20–36+ weeks)', scope: 'Same as standard, third-party integrations, real-time intercommunication, encryption', price: '$108,000–$432,000', hours: '2400 hours (est.)' },
+        { name: 'Maintenance (10–120 hrs/month)', scope: 'Crash fixes, OS updates, bug fixes, general maintenance', price: '$500–$22,000 per month', hours: 'N/A' },
     ];
 
     return (
-        <section id="services" className="section-muted">
+        <section id="services" className="section bg-offwhite">
             <div className="w-full">
-                <h2 className="text-3xl font-black tracking-tight">Service Offerings</h2>
-                <div className="mt-6 overflow-x-auto">
-                    <table className="min-w-full text-sm">
+                <div className="flex items-baseline justify-between">
+                    <span className="text-hs text-xbold text-dcol"> Services </span>
+                </div>
+                <div className="text-right">
+                    <span className="text-bxs text-medium text-dcol text-right"> Pricing is shown for 1 dev - 4 devs (does NOT include other departments)</span>
+                </div>
+                <div className="overflow-x-auto border">
+                    <table className="min-w-full text-bxs text-dcol">
                         <thead className="text-left bg-white">
                             <tr>
-                                <th className="p-3 font-semibold">Service package</th>
-                                <th className="p-3 font-semibold">Scope</th>
-                                <th className="p-3 font-semibold">Pricing (USD)</th>
-                                <th className="p-3 font-semibold">Development hours</th>
+                                <th className="p-3 text-bold border-r">Service</th>
+                                <th className="p-3 text-bold border-r">Scope</th>
+                                <th className="p-3 text-bold border-r">Pricing (CAD)</th>
+                                <th className="p-3 text-bold">Development hours</th>
                             </tr>
                         </thead>
-                        <tbody className="bg-white">
+                        <tbody className="">
                             {rows.map((r, i) => (
-                                <tr key={i} className="border-t">
-                                    <td className="p-3 font-medium">{r.name}</td>
-                                    <td className="p-3 text-slate-700">{r.scope}</td>
-                                    <td className="p-3">{r.price}</td>
-                                    <td className="p-3">{r.hours}</td>
+                                <tr key={i} className="border-t odd:bg-[var(--color-grey)] even:bg-white">
+                                    <td className="p-3 text-sbold text-dcol border-r">{r.name}</td>
+                                    <td className="p-3 text-dcol border-r">{r.scope}</td>
+                                    <td className="p-3 text-sbold text-pcol border-r border-dcol">{r.price}</td>
+                                    <td className="p-3 text-sbold text-scol">{r.hours}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -109,22 +126,22 @@ function Services() {
 }
 function Rates() {
     const rows = [
-        ['Development', '$85–$140 /hour'],
-        ['Design/Branding/UI', '$80–$130 /hour'],
-        ['QA', '$65–$100 /hour'],
+        ['Management', '$85 /hour'],
+        ['Development', '$45 /hour'],
+        ['Design/Branding/UI', '$40 /hour'],
+        ['QA', '$32 /hour'],
     ];
-
     return (
-        <section id="rates" className="section">
+        <section id="rates" className="section bg-offwhite">
             <div className="w-full">
-                <h2 className="text-3xl font-black tracking-tight">Rate Cards</h2>
+                <h2 className="text-hs text-xbold text-dcol">Rate Cards</h2>
                 <div className="mt-6 grid md:grid-cols-3 gap-4">
                     {rows.map(([dept, price], i) => (
-                        <div key={i} className="rounded-2xl border border-slate-200 p-5 bg-white">
-                            <div className="text-sm text-slate-500">Department</div>
-                            <div className="font-bold">{dept}</div>
-                            <div className="mt-2 text-sm text-slate-500">Pricing</div>
-                            <div className="font-semibold">{price}</div>
+                        <div key={i} className="rounded-2xl border border-dcol p-5 bg-white">
+                            <div className="text-bxs text-dcol">Department</div>
+                            <div className="text-bm text-bold text-dcol">{dept}</div>
+                            <div className="mt-2 text-bxs text-dcol">Pricing</div>
+                            <div className="text-bm text-bold text-pcol">{price}</div>
                         </div>
                     ))}
                 </div>
@@ -132,50 +149,35 @@ function Rates() {
         </section>
     );
 }
-function Contracts() {
-    return (
-        <section id="contracts" className="section-muted">
-            <div className="w-full">
-                <h2 className="text-3xl font-black tracking-tight">Contracts & Payments</h2>
-                <ul className="mt-4 list-disc pl-6 text-slate-700 space-y-2">
-                    <li>Change Requests are billable at department rate card.</li>
-                    <li>Payment milestones: 30% deposit (non-refundable), 30% mid-build, 30% code-complete, 10% release/launch.</li>
-                    <li>IP: Deliverables and final product are owned by client. Libraries and code are owned by QuickFox.</li>
-                    <li>Kill fee: 20% of remaining payments is required to cancel project.</li>
-                    <li>Late fees: 1.5–2% /month or service pause after 10 business days.</li>
-                </ul>
-            </div>
-        </section>
-    );
-}
-function Maintenance() {
+function ITServices() {
     const tiers = [
-        ['Basic', '3 business days', '$2k /month', '20 hours'],
-        ['Standard', '1 business days', '$4k /month', '40 hours'],
-        ['Premium', 'Same day', '$8.5k /month', '80 hours'],
+        ['Basic', '3 business days', '$500 /month', '10 hours'],
+        ['Standard', '1 business day', '$2,000 /month', '40 hours'],
+        ['Premium', 'Same day', '$4,000 /month', '80 hours'],
+        ['Enterprise', 'Same day', '$6,000 /month', '120 hours'],
     ];
 
     return (
-        <section className="section">
+        <section className="section bg-offwhite">
             <div className="w-full">
-                <h2 className="text-3xl font-black tracking-tight">Maintenance</h2>
+                <h2 className="text-hs text-xbold text-dcol">IT Services</h2>
                 <div className="mt-6 overflow-x-auto">
-                    <table className="min-w-full text-sm bg-white">
+                    <table className="min-w-full text-sm bg-white border">
                         <thead className="text-left">
                             <tr>
-                                <th className="p-3 font-semibold">Tier</th>
-                                <th className="p-3 font-semibold">Response Time</th>
-                                <th className="p-3 font-semibold">Pricing</th>
-                                <th className="p-3 font-semibold">Time Estimate</th>
+                                <th className="p-3 text-bs text-bold text-dcol border-r">Tier</th>
+                                <th className="p-3 text-bs text-bold text-dcol border-r">Response Time</th>
+                                <th className="p-3 text-bs text-bold text-dcol border-r">Pricing</th>
+                                <th className="p-3 text-bs text-bold text-dcol">Time Estimate</th>
                             </tr>
                         </thead>
                         <tbody>
                             {tiers.map((r, i) => (
-                                <tr key={i} className="border-t">
-                                    <td className="p-3 font-medium">{r[0]}</td>
-                                    <td className="p-3">{r[1]}</td>
-                                    <td className="p-3">{r[2]}</td>
-                                    <td className="p-3">{r[3]}</td>
+                                <tr key={i} className="border-t odd:bg-[var(--color-grey)] even:bg-white">
+                                    <td className="p-3 text-bxs text-sbold text-dcol border-r">{r[0]}</td>
+                                    <td className="p-3 text-bxs text-normal text-dcol border-r">{r[1]}</td>
+                                    <td className="p-3 text-bxs text-sbold text-pcol border-r border-dcol">{r[2]}</td>
+                                    <td className="p-3 text-bxs text-sbold text-scol">{r[3]}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -187,39 +189,82 @@ function Maintenance() {
 }
 function CTA() {
     return (
-        <section id="contact" className="section">
-            <div className="w-full max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-black tracking-tight">Book a 20 minute scoping call</h2>
-                <p className="mt-3 text-slate-600">We’ll map a timeline and price range on the call.</p>
+        <section id="contact" className="section bg-offwhite">
+            <div className="w-full mx-auto text-center">
+                <h2 className="text-hm text-xbold text-dcol">Book a 20 minute scoping call</h2>
+                <p className="mt-3 text-normal text-dcol">We’ll map a timeline and price range on the call.</p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                    <a
-                        href={`mailto:${BRAND.email}?subject=Project%20Inquiry`}
-                        className="btn-primary"
-                    >
-                        Email us
-                    </a>
+                    <a href={`mailto:${BRAND.email}?subject=Project%20Inquiry`} className="btn-primary"> Email us </a>
                 </div>
+                <p className="mt-8 text-bxs text-normal text-dcol">Prefer to chat?</p>
+                <a href={BRAND.socials.linkedin} className="inline-flex items-center gap-2 text-bxs text-normal text-tcol">
+                    <Icon icon="logos:linkedin-icon" width="20" height="20" />
+                    Connect on LinkedIn
+                </a>
+                <p className="mb-2 text-bxs text-sbold text-dcol text-left">Follow us on social media</p>
+                
+                <a href={BRAND.socials.X} className="mb-1 flex items-center gap-2 text-bxs text-normal text-tcol text-left">
+                    <Icon icon="simple-icons:x" width="20" height="20" className="text-black"/>
+                    Twitter/X
+                </a>
 
-                {/* Example of a contextual link sitting on a light background */}
-                <p className="mt-6 text-sm text-slate-600">
-                    Prefer to chat?{" "}
-                    <a href={BRAND.socials.linkedin} className="link-on-light">
-                        Connect on LinkedIn
-                    </a>
-                </p>
+                <a href={BRAND.socials.YouTube} className="mb-1 flex items-center gap-2 text-bxs text-normal text-tcol text-left">
+                    <Icon icon="logos:youtube-icon" width="20" height="20" />
+                    YouTube
+                </a>
+
+                <a href={BRAND.socials.Instagram} className="mb-1 flex items-center gap-2 text-bxs text-normal text-tcol text-left">
+                    <Icon icon="logos:instagram-icon" width="20" height="20" />
+                    Instagram
+                </a>
+
+                <a href={BRAND.socials.TikTok} className="flex items-center gap-2 text-bxs text-normal text-tcol text-left">
+                    <Icon icon="logos:tiktok-icon" width="20" height="20" />
+                    TikTok
+                </a>
             </div>
         </section>
     );
 }
+function SocialLinks({ BRAND }) {
+    return (
+        <div className="space-y-2">
+            <p className="text-bxs text-normal text-dcol text-left">Follow us on social media</p>
+
+            <a href={BRAND.socials.X} className="flex items-center gap-2 text-bxs text-normal text-left">
+                <Icon icon="simple-icons:x" width="20" height="20" />
+                Twitter/X
+            </a>
+
+            <a href={BRAND.socials.YouTube} className="flex items-center gap-2 text-bxs text-normal text-left">
+                <Icon icon="logos:youtube-icon" width="20" height="20" />
+                YouTube
+            </a>
+
+            <a href={BRAND.socials.Instagram} className="flex items-center gap-2 text-bxs text-normal text-left">
+                <Icon icon="logos:instagram-icon" width="20" height="20" />
+                Instagram
+            </a>
+
+            <a href={BRAND.socials.TikTok} className="flex items-center gap-2 text-bxs text-normal text-left">
+                <Icon icon="logos:tiktok-icon" width="20" height="20" />
+                TikTok
+            </a>
+        </div>
+    );
+}
 function Footer() {
     return (
-        <footer className="border-t border-slate-200">
+        <footer className="border-t  border-dcol">
             <div className="w-full px-6 md:px-10 lg:px-14 py-10 flex flex-col md:flex-row gap-6 items-center justify-between">
                 <div className="flex items-center gap-3">
                     <Logo className="h-6 w-6" />
-                    <span className="font-bold">QuickFox Interactive</span>
+                    <div className="flex items-center gap-1">
+                        <span className="text-bm text-bold text-pcol">QuickFox</span>
+                        <span className="text-bm text-bold text-scol">Interactive</span>
+                    </div>
                 </div>
-                <p className="text-sm text-slate-500">
+                <p className="text-bxs text-dcol">
                     © {new Date().getFullYear()} QuickFox Interactive. All rights reserved.
                 </p>
             </div>

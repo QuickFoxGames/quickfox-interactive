@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\.vercelignore",
   "PreviewInSolutionExplorer": false
 }
