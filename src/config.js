@@ -5,9 +5,9 @@ export const BRAND = {
     socials: {
         website: "https://quickfox-interactive.vercel.app/",
         linkedin: "https://www.linkedin.com/company/quickfox-interactive",
-        X: "https://www.linkedin.com/company/quickfox-interactive",
-        YouTube: "https://www.linkedin.com/company/quickfox-interactive",
-        Instagram: "https://www.linkedin.com/company/quickfox-interactive",
+        X: "https://x.com/QuickFoxInt",
+        YouTube: "https://youtube.com/@quickfoxinteractive?si=nnCEY-3HEOJ4DVFF",
+        Instagram: "https://www.instagram.com/quickfoxinteractive/",
         TikTok: "https://www.linkedin.com/company/quickfox-interactive",
     },
 };
